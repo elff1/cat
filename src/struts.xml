@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="cat" extends="struts-default">
+		<!-- <global-results>
+			<result name="exception">/form/exception2.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception" result="exception" />
+		</global-exception-mappings> -->
+		
+		<action name="*_cat" method="{1}" class="catAction">
+			<!-- <param name="action">{1}</param> -->
+			<result>/list.jsp</result>
+			<result name="list">/list.jsp</result>
+		</action>
+	</package>
+</struts>    
